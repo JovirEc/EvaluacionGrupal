@@ -1,0 +1,65 @@
+body {
+    background-color: grey;
+    background-size: cover;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.cajaTexto {
+    border-radius: 4px;
+    border-color: #141414;
+    font-size: 20px;
+    color: rgb(247, 245, 245);
+
+
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    color: black;
+    background-color: azure;
+
+
+}
+.ResultadoColor{
+    color: white;
+}
+tbody tr:nth-child(odd) {
+    background-color: #908efc;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #6a51cf;
+  }
+  
+  tbody tr {
+    background-image: url(noise.png);
+  }
+  
+  table {
+    
+    background-color: #6a51cf;
+    color: #0b0c0c;
+    width: 100%;
+    
+  }
+  td{
+    text-align: center;
+    
+    
+  }
+  tr{
+    text-align: center;
+    color: #0b0c0c;
+  }
+  .areaTabla{
+    margin-top: 20px;
+    color: #0b0c0c;
+    
+  }
+  .Autor{
+    color: white;
+  }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="notas.css">
+    <script src="notas.js"></script>
+    <script src="utilitarios.js"></script>
+</head>
+
+<body onload=" mostraraTablas()">
+    <img src="logoKrakeDev.png" width="200px"/>
+    <div class="cajaTexto">
+        <h3>Ingrese Nombre</h3>
+        <input type="text" id="Nombre" />
+        <h3>Ingrese Apellido</h3>
+        <input type="text" id="Apellido" />
+        <h3>Ingrese Nota 1</h3>
+        <input type="text" id="Nota1" />
+        <h3>Ingrese Nomta 2</h3>
+        <input type="text" id="Nota2" />
+        <h3>Ingrese Nota 3</h3>
+        <input type="text" id="Nota3" />
+        <h3>Promedio</h3>
+        <h3 id="lblPromedio" class="ResultadoColor"></h3>
+    </div>
+    <input type="button" class="botones" id="btnCalcular" value="Calcular" ondblclick="calcular();">
+    <input type="button" class="botones" id="btnGuardar" value="Guaradar" ondblclick="guaradar();">
+    <div id="tablaEstudiantes" class="areaTabla">
+       
+
+    </div>
+    <h4 class="Autor">Autor: Gabriela Altamirano </h4>
+
+</body>
+
+</html>

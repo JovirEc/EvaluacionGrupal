@@ -22,21 +22,44 @@ calcularPromedio = function(p1,p2,p3){
 }
 
 calcular = function(){
+    let nombre = recuperarTexto("lblNombre")
     let nota1 = recuperarFloat("lblNota1")
     let nota2 = recuperarFloat("lblNota2")
     let nota3 = recuperarFloat("lblNota3")
     let totalSuma
     let totalPromedio
+    let hayError = false
+    let msgError = ""
 
-    totalSuma = calcularTotal(nota1,nota2,nota3)
-    totalPromedio = calcularPromedio(nota1,nota2,nota3)
+    if(nombre.length < 3){
+        hayError = true
+        msgError = "*Debe tener minimo 3 caracteres"
+        mostrarTexto("lblErrorNombre",msgError)
+    }else{
+        for(let i=0;i<nombre.length;i++){
+            if (nombre.charCodeAt(i) < 65 || nombre.charCodeAt(i) > 90){
+                hayError = true
+                msgError = "*Solo letras mayusculas"
+                mostrarTexto("lblErrorNombre",msgError)
+                break
+            }
+            else{
+                mostrarTexto("lblErrorNombre","")
+            }
+        }
+    }
 
-    let floatSuma = totalSuma.toFixed(1)
-    let floatPromedio = totalPromedio.toFixed(1)
-
-    mostrarTexto("lblSuma","Total es: "+floatSuma)
-    mostrarTexto("lblPromedio","Promedio es: "+floatPromedio)
-    habilitarComponente("botonGuardar")
+    if(hayError == false){
+        totalSuma = calcularTotal(nota1,nota2,nota3)
+        totalPromedio = calcularPromedio(nota1,nota2,nota3)
+    
+        let floatSuma = totalSuma.toFixed(1)
+        let floatPromedio = totalPromedio.toFixed(1)
+    
+        mostrarTexto("lblSuma","Total es: "+floatSuma)
+        mostrarTexto("lblPromedio","Promedio es: "+floatPromedio)
+        habilitarComponente("botonGuardar")
+    } 
 }
 
 guardar = function(){

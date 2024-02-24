@@ -1,3 +1,19 @@
 body{
     background-image: url("Programming web banner stock vector_ Illustration of network - 164823124.jpg");
 }
+.titulo{
+    color: white;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.Inter{
+    color: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.bonton{
+    border-radius: 25px;
+    color: dodgerblue;
+    background-color: white;
+}

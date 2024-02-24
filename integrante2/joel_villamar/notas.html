@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="notas.js"></script>
+    <script src="utilitarios.js"></script>
+    <link rel="stylesheet" href="notas.css">
+</head>
+<body onload="mostrarOnload()">
+    <div class="contenedorBajo">
+        <div class="contenedorAlto">
+            <div class="titulo">EVALUACIÓN KRAKEDEV</div>
+            <div class="contenidoDatos">
+                <div class="titulosCajas">
+                    <div class="tituloBox">NOMBRE</div>
+                    <div class="tituloBox">APELLIDO</div>
+                    <div class="tituloBox">NOTA 1</div>
+                    <div class="tituloBox">NOTA 2</div>
+                    <div class="tituloBox">NOTA 3</div>
+                </div>
+                <div class="datosCajas">
+                    <div class="inputBox"><input type="text" id="lblNombre"></div>
+                    <div class="inputBox"><input type="text" id="lblApellido"></div>
+                    <div class="inputBox"><input type="text" id="lblNota1"></div>
+                    <div class="inputBox"><input type="text" id="lblNota2"></div>
+                    <div class="inputBox"><input type="text" id="lblNota3"></div>
+                </div>
+                
+                <!--<div class="ingresoDatos">
+                    <div class="tituloCaja">NOMBRE</div>
+                    <input type="text" id="cajaNombre" class="cajaDatos">
+                    <div class="divError" id="lblErrorNombre"></div>
+                </div>
+                <div class="ingresoDatos">
+                    <div class="tituloCaja">EDAD</div>
+                    <input type="text" id="cajaEdad" class="cajaDatos">
+                    <div class="divError" id="lblErrorEdad"></div>
+                </div>-->
+            </div>
+            <div class="botonera">
+            <input type="button" value="CALCULAR" class="botonCalcular" onclick="calcular()">
+            <input type="button" value="GUARDAR" class="botonGuardar" id="botonGuardar" onclick="guardar()" >
+            </div>
+            <div class="contenidoDatos2">
+                <div class="cajaMostrar">
+                    <div class="lblSuma" id="lblSuma"></div>
+                </div>
+                <div class="cajaMostrar">
+                    <div class="lblPromedio" id="lblPromedio"></div>
+                </div>
+            </div>
+            
+            <img src="./img/notas.png" style="width: 100px;" alt="">
+            <div id="lblTabla" class="tablaPrincipal"></div>
+            <div>AUTOR: JOEL VILLAMAR</div>
+        </div>
+    </div>
+</body>
+</html>

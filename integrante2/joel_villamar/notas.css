@@ -1,0 +1,177 @@
+body{
+    background-color: rgb(20, 20, 20);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedorBajo{
+    background-color: rgb(210, 210, 210);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.contenedorAlto{
+    background-color: white;
+    width: 600px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+table tr{
+    padding: 10px;
+}
+.titulo{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.ingresoDatos{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+.contenidoDatos{
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(189, 202, 205, 0.149);
+    border-radius: 10px;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contenidoDatos2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cajaMostrar{
+    background-color: aquamarine;
+    width: 200px;
+    text-align: center;
+}
+.lblSuma{
+    padding: 10px;
+    background-color: rgb(238, 238, 238);
+}
+.lblPromedio{
+    padding: 10px;
+    background-color: rgb(238, 238, 238);
+}
+.tituloCajas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.datosCajas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.tituloBox{
+    height: 23px;
+    margin-right: 10px;
+}
+
+.inputBox{
+    height: 23px;
+}
+.tablaPrincipal{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    
+}
+
+.botonCalcular{
+    width: 150px;
+    height: 40px;
+    border: 0;
+    background-color: rgb(19, 77, 109);
+    border-radius: 5px;;
+    color: white;
+    font-weight: 600;
+}
+.botonCalcular:hover{
+    background-color: rgb(14, 58, 81);
+}
+.botonCalcular:active{
+    background-color: rgb(17, 117, 171);
+}
+
+.botonGuardar{
+    width: 150px;
+    height: 40px;
+    border: 0;
+    background-color: rgb(28, 197, 155);
+    border-radius: 5px;;
+    color: white;
+    font-weight: 600;
+}
+.botonGuardar:hover{
+    background-color: rgb(18, 159, 187);
+}
+.botonGuardar:active{
+    background-color: rgb(21, 216, 148);
+}
+
+.boxMayorMenor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.PersonasMayorMenor{
+    background-color: rgb(233, 233, 233);
+    width: 260px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.textoCaja{
+    padding-top: 10px;
+    width: 250px;
+
+}
+
+.botonera{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.botonGuardar:disabled {
+    background-color:gray; 
+    color: #232623;
+    border: 1px solid;
+    border-color: #232623;
+    border-radius: 5px;
+}
+.botonGuardar:active{
+    background-color:  #217023; 
+    border: 1px solid;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+}

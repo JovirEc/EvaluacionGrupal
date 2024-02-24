@@ -50,8 +50,8 @@ calcular = function(){
     }
 
     if(hayError == false){
-        totalSuma = calcularTotal(nota1,nota2,nota3)
-        totalPromedio = calcularPromedio(nota1,nota2,nota3)
+        let totalSuma = calcularTotal(nota1,nota2,nota3)
+        let totalPromedio = calcularPromedio(nota1,nota2,nota3)
     
         let floatSuma = totalSuma.toFixed(1)
         let floatPromedio = totalPromedio.toFixed(1)

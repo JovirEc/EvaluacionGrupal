@@ -10,39 +10,78 @@ function calcularTotal(n1, n2, n3) {
     return suma
 }
 function calcularPromedio(p1, p2, p3) {
-    let nota;
     let suma = (p1 + p2 + p3) / 3;
-    nota = suma
-    return nota
+    return suma
 }
-function calcular() {
-    let promedio;
+calcular = function() {
     let nota1 = recuperarFloat("Nota1");
+    let nota1txt = recuperarTexto("Nota1")
     let nota2 = recuperarFloat("Nota2");
+    let nota2txt = recuperarTexto("Nota2")
     let nota3 = recuperarFloat("Nota3");
-    promedio = calcularPromedio(nota1, nota2, nota3);
-    let respuesta = "El promedio es de " + promedio;
-
-    mostrarTexto("lblPromedio", respuesta);
-    habilitarComponente("btnGuardar");
+    let nota3txt = recuperarTexto("Nota3")
 
     let hayError = false;
     let msmErrores = "";
-    if (nota1.length <= 0) {
+
+    let promedio = calcularPromedio(nota1, nota2, nota3);
+    let respuesta = "El promedio es de " + promedio;
+    mostrarTexto("lblPromedio", respuesta);
+
+    if (nota1txt.length <= 0) {
         hayError = true;
         msmErrores = "Ingrese cantidad";
-        mostrarTexto("LblErrores1", msmErrores);
+        mostrarTexto("LblErrores1",msmErrores);
     } else {
-        for (let i = 0; i < nota1.length; i++) {
-            if (nota1.charCodeAt(i) < 48 || nota1.charCodeAt(i) > 57) {
+        for (let i = 0; i < nota1txt.length; i++) {
+            if (nota1txt.charCodeAt(i) < 48 || nota1txt.charCodeAt(i) > 57) {
                 hayError = true;
                 msmErrores = "Ingrese solo numeros";
-                mostrarTexto("LblErrores1", msmErrores);
+                mostrarTexto("LblErrores1",msmErrores);
                 break
+            }else{
+                mostrarTexto("LblErrores1",msmErrores)
             }
 
         }
     }
+
+    if (nota2txt.length <= 0) {
+        hayError = true;
+        msmErrores = "Ingrese cantidad";
+        mostrarTexto("LblErrores2",msmErrores);
+    } else {
+        for (let i = 0; i < nota2txt.length; i++) {
+            if (nota2txt.charCodeAt(i) < 48 || nota2txt.charCodeAt(i) > 57) {
+                hayError = true;
+                msmErrores = "Ingrese solo numeros";
+                mostrarTexto("LblErrores2",msmErrores);
+                break
+            }else{
+                mostrarTexto("LblErrores2",msmErrores)
+            }
+
+        }
+    }
+
+    if (nota3txt.length <= 0) {
+        hayError = true;
+        msmErrores = "Ingrese cantidad";
+        mostrarTexto("LblErrores3",msmErrores);
+    } else {
+        for (let i = 0; i < nota3txt.length; i++) {
+            if (nota3txt.charCodeAt(i) < 48 || nota3txt.charCodeAt(i) > 57) {
+                hayError = true;
+                msmErrores = "Ingrese solo numeros";
+                mostrarTexto("LblErrores3",msmErrores);
+                break
+            }else{
+                mostrarTexto("LblErrores3",msmErrores)
+            }
+
+        }
+    }
+
     if (hayError == false) {
         let suma = calcularTotal(nota1, nota2, nota3);
         let promedio = calcularPromedio(nota1, nota2, nota3);
@@ -50,7 +89,7 @@ function calcular() {
         mostrarTexto("lblPromedio", "Promedio" + promedio);
 
     }
-
+    habilitarComponente("btnGuardar");
 }
 function guaradar() {
     let nombres = recuperarTexto("Nombre");

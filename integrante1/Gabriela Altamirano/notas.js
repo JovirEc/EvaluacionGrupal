@@ -22,11 +22,12 @@ function calcular() {
     let nota3 = recuperarFloat("Nota3");
     promedio = calcularPromedio(nota1, nota2, nota3);
     let respuesta = "El promedio es de " + promedio;
+
     mostrarTexto("lblPromedio", respuesta);
     habilitarComponente("btnGuardar");
-    
+
     let hayError = false;
-    let msmErrores;
+    let msmErrores = "";
     if (nota1.length <= 0) {
         hayError = true;
         msmErrores = "Ingrese cantidad";
@@ -42,6 +43,13 @@ function calcular() {
 
         }
     }
+    if (hayError == false) {
+        let suma = calcularTotal(nota1, nota2, nota3);
+        let promedio = calcularPromedio(nota1, nota2, nota3);
+        mostrarTexto("lblSuma", "Suma total" + suma);
+        mostrarTexto("lblPromedio", "Promedio" + promedio);
+
+    }
 
 }
 function guaradar() {
@@ -50,8 +58,8 @@ function guaradar() {
     let not1 = recuperarFloat("Nota1");
     let not2 = recuperarFloat("Nota2");
     let not3 = recuperarFloat("Nota3");
-    let totalG = calcularTotal();
-    let promedioG = calcularPromedio();
+    let totalG = calcularTotal(not1,not2,not3);
+    let promedioG = calcularPromedio(not1,not2,not3);
     estudiantes = {}
     estudiantes.nombre = nombres;
     estudiantes.apellido = apellidos;

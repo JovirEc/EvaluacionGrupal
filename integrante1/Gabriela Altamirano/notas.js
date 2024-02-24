@@ -17,7 +17,6 @@ function calcularPromedio(p1, p2, p3) {
 }
 function calcular() {
     let promedio;
-    let promedioDecimales;
     let nota1 = recuperarFloat("Nota1");
     let nota2 = recuperarFloat("Nota2");
     let nota3 = recuperarFloat("Nota3");
@@ -25,6 +24,25 @@ function calcular() {
     let respuesta = "El promedio es de " + promedio;
     mostrarTexto("lblPromedio", respuesta);
     habilitarComponente("btnGuardar");
+    
+    let hayError = false;
+    let msmErrores;
+    if (nota1.length <= 0) {
+        hayError = true;
+        msmErrores = "Ingrese cantidad";
+        mostrarTexto("LblErrores1", msmErrores);
+    } else {
+        for (let i = 0; i < nota1.length; i++) {
+            if (nota1.charCodeAt(i) < 48 || nota1.charCodeAt(i) > 57) {
+                hayError = true;
+                msmErrores = "Ingrese solo numeros";
+                mostrarTexto("LblErrores1", msmErrores);
+                break
+            }
+
+        }
+    }
+
 }
 function guaradar() {
     let nombres = recuperarTexto("Nombre");
@@ -71,7 +89,7 @@ function mostraraTablas() {
             "<td>" + datosEstudiante.nota3 + "</td>" +
             "<td>" + datosEstudiante.total + "</td>" +
             "<td>" + datosEstudiante.promedio + "</td>" +
-            
+
             "</tr>"
     }
     contenidoTabla += "</table>"
